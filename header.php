@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<title>CSI</title>
-		<link rel="shortcut icon" href="img/csi-logo.png" />
+		<link rel="shortcut icon" type="image/png" href="/img/csi-logo.png"/>
 		<link rel="stylesheet" href="css/footer.css" >
 		<link rel="stylesheet" href="css/bootstrap-4.0.0-alpha.css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
@@ -50,9 +50,13 @@
 				<div class="col-1 col-lg-1 col-md-1 col-xl-1  hover-me" align="center">
 					<a class="white-color nav-item nav-link <?php if(isset($page_tab) and $page_tab == "about_us"){echo "active";}?>" href="about_us.php" >About</a>
 				</div>
-				<div class="col-2 col-lg-2 col-md-2 col-xl-2 hover-me" align="center">
+				<div class="col-1 col-lg-1 col-md-1 col-xl-1 hover-me" align="center">
+					<a class="white-color nav-item nav-link <?php if(isset($page_tab) and $page_tab == "feedback"){echo "active";}?>" href="feedback.php">Feedback</a>
+				</div>
+                <div class="col-2 col-lg-2 col-md-2 col-xl-2 hover-me" align="center">
 					<a class="white-color nav-item nav-link <?php if(isset($page_tab) and $page_tab == "contact_us"){echo "active";}?>" href="contact_us.php">Contact us</a>
 				</div>
+                
 				</div> 
 			 
 			</div> <!--Container ended-->

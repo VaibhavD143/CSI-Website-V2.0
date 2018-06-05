@@ -314,7 +314,7 @@
         <div class="team">
           <div class="team-image">
             <a href="#">
-              <img src="img/17_maitri" class="rounded-circle img-fluid">
+              <img src="img/17_maitri.JPG" class="rounded-circle img-fluid">
             </a>
             <div class="team-links">
               <div class="team-links-list">
