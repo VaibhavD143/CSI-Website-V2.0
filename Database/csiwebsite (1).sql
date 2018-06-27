@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 26, 2018 at 04:39 PM
+-- Generation Time: Jun 27, 2018 at 10:29 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.13
 
@@ -30,8 +30,21 @@ CREATE TABLE `carousel` (
   `image_id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `description` longtext NOT NULL,
-  `image` longblob NOT NULL
+  `image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `carousel`
+--
+
+INSERT INTO `carousel` (`image_id`, `name`, `description`, `image`) VALUES
+(3, 'carousel_1', 'first image', './img/001-min.JPG'),
+(4, 'carousel_2', 'second image', './img/002-min.JPG'),
+(5, 'carouel_3', 'third image', './img/003-min.JPG'),
+(6, 'carouel_4', 'fourth image', './img/004-min.JPG'),
+(7, 'carouel_5', 'fifth image', './img/005-min.JPG'),
+(8, 'carouel_6', 'sixth image', './img/006-min.JPG'),
+(9, 'carouel_7', 'seventh image', './img/007-min.JPG');
 
 -- --------------------------------------------------------
 
@@ -44,7 +57,7 @@ CREATE TABLE `committee_members` (
   `name` varchar(50) NOT NULL,
   `text` text NOT NULL,
   `committee_id` year(4) NOT NULL,
-  `image` longblob NOT NULL
+  `image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -58,7 +71,7 @@ CREATE TABLE `event` (
   `name` varchar(50) NOT NULL,
   `description` longtext NOT NULL,
   `date` date NOT NULL,
-  `image` longblob NOT NULL
+  `image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -71,7 +84,7 @@ CREATE TABLE `faq` (
   `faq_id` int(11) NOT NULL,
   `question` longtext NOT NULL,
   `answer` longtext NOT NULL,
-  `image` longblob NOT NULL
+  `image` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -89,13 +102,6 @@ CREATE TABLE `feedback` (
   `description` longtext NOT NULL,
   `special_comment` longtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `feedback`
---
-
-INSERT INTO `feedback` (`feedback_id`, `name`, `email`, `year`, `branch`, `description`, `special_comment`) VALUES
-(1, 'sid', 'siddhrathyadav1999@gmail.com', '2nd Year', 'IT', 'hello', 'yar');
 
 --
 -- Indexes for dumped tables
@@ -139,7 +145,7 @@ ALTER TABLE `feedback`
 -- AUTO_INCREMENT for table `carousel`
 --
 ALTER TABLE `carousel`
-  MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `committee_members`
 --

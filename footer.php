@@ -16,11 +16,12 @@
             	
                     <ul class="pages">
                         <li><a href="index.php">HOME</a></li>
-                        <li><a href="gallery.php">Events</a></li>
+                        <li><a href="gallery.php">EVENTS</a></li>
                         <li><a href="present_committee.php">PRESENT COMMITTEE</a></li>
                         <li><a href="past_committees.php">PAST COMMITTEE</a></li>
                         <li><a href="about_us.php">ABOUT</a></li>
                         <li><a href="contact_us.php">CONTACT US</a></li>
+                        <li><a href="feedback.php">FEEDBACK</a></li>
                     </ul>
                
             	

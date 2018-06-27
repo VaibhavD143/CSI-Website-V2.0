@@ -1,4 +1,4 @@
-<?php include('header.php');?>
+<?php include('header.php'); ?>
 	<style>
 		/* jssor slider loading skin spin css */
 		.jssorl-009-spin img {
@@ -39,27 +39,27 @@
             <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
         </div>
         <div data-u="slides" style="cursor:default;position:relative;top:0px;left:80px;width:820px;height:380px;overflow:hidden;">
-            <div>
-                <img data-u="image" src="img/001.jpg" />
-            </div>
-            <div>
-                <img data-u="image" src="img/002.jpg" />
-            </div>
-            <div>
-                <img data-u="image" src="img/003.jpg" />
-            </div>
-            <div>
-                <img data-u="image" src="img/004.jpg" />
-            </div>
-            <div>
-                <img data-u="image" src="img/005.jpg" />
-            </div>
-            <div>
-                <img data-u="image" src="img/006.jpg" />
-            </div>
-            <div>
-                <img data-u="image" src="img/007.jpg" />
-            </div>
+            
+            <?php
+                            require_once('connect.php');
+                            if(!$resultset = $database_handler->query("SELECT * from `carousel`;"))
+                            {
+			                     die("Query error");
+                            }   
+                            
+                            
+                            while($row = $resultset->fetch_assoc())
+                            {
+                            ?>
+                            <div>
+                            <img data-u="image" src="<?php echo ($row['image']); ?>"/>
+                            </div>
+                            <?php
+                            }
+                        ?>              
+                                
+            
+           
             <a data-u="any" href="https://www.jssor.com" style="display:none">js slider</a>
         </div>
         <!-- Bullet Navigator -->
